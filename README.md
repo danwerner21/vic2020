@@ -8,11 +8,18 @@ This project is an open source implementation of a VIC-20 (mostly) compatible co
 
 ![Vic-2020 boardset](Support/images/bare_system.jpg)
 
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+## Why?
+Why would I do a replica of the VIC-20?   Well, like many others the VIC-20 was my first computer.  In 1981 I spent most of my (non-school) waking hours learning everything possible about this machine, and that launched me into a successful career in IT.   In the early 2000s I discovered the retro-computer scene and have spent many hours building and creating new retro computer designs following the work happening in such places as 6502.org and retrobrewcomputers.org.  So much so, that my boss (Jamie Fichter) has taken to giving me crap about spending my free time "Building VIC-20s" . . . .   It was earlier in 2020 when he had made one such comment that I realized that while I had constructed many vintage designs, I had never actually built a VIC-20.  I decided that I should correct that oversight as soon as possible -- and thus the VIC-2020 Fichter Edition was born.  
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+## What is included in this repo?
+As of this time, the repo includes
+*	The VIC-2020 Mainboard PCB Kicad design and Gerber files
+*	The VIC-2020 Keyboard PCB Kicad design and Gerber files
+*	OpenSCAD and STL files for a 3d printed case
+*	Design Files for Max Keyboard Custom Printed Keycaps
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+![Vic-2020 Mainboard](Support/images/mainboard.jpg)
+![Vic-2020 Keyboard](Support/images/keyboard.jpg)
 
 ---
 
