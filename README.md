@@ -80,7 +80,8 @@ J1 2&3, J2 1&2|27128         | NOT VALID
 
 ## Bill Of Materials
 
-Mainboard
+###Mainboard
+
 Part Number|Quantity|Name
 -----------|--------|----
 C35,C36	|2|	.001uf Capacitor
@@ -144,9 +145,11 @@ U21,U22	|2|	W65C22NxP
 Y1	|1|	Crystal 14.31818Mhz
 
 
-Keyboard
+###Keyboard
+
 Part Number|Quantity|Name|Source
 -----------|--------|----|-------
+a|b|c
 
 
 ---
