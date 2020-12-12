@@ -155,7 +155,7 @@ Quantity|Name
 1|Pin Header 1x2 or LED 
 1|330 Ohm Resistor
 1| Keycap set (See Max Keyboard Template to order custom keycaps)
-
+1| 1x20 Female to Female dupont connector ribbon cable to connect keyboard to mainboard
 
 
 
