@@ -80,7 +80,74 @@ J1 2&3, J2 1&2|27128         | NOT VALID
 
 ## Bill Of Materials
 
-Jumper Settings|Chip Used|Resulting eprom configuration 
----------------|---------|-----------------------
+Mainboard
+Part Number|Quantity|Name
+-----------|--------|----
+Reference	Qty	 Value
+C35,C36	|2|	.001uf Capacitor
+C7,C12-C34|	23|	.01uf Capacitor
+C1,C6,C8,C10,C40|	5|	.1uf Capacitor
+C37	|1|	.47uF Electrolytic Capacitor
+C38	|1|	10uF Electrolytic Capacitor
+C4	|1|	10uf Capacitor
+C11	|1|	1uf Electrolytic Capacitor
+C9	|1|	2.2uF Electrolytic Capacitor
+C5	|1|	220pf Capacitor
+C3	|1|	2pf Capacitor
+C39	|1|	47uF Capacitor
+C2	|1|	8-90pf  Variable Capacitor
+FB1-FB9|	9|	Ferrite_Bead_Small
+J1,J2,J3|	3|	Pin Header 1x03 2.54mm
+J10	|1|	Barrel Jack
+J11	|1|	Pin Header 2x8 2.54mm
+J12	|1|	Card Edge Connector 2x22 (Mouser #:587-305-044-520-502)
+J13	|1|	DIN 6 IEC connector (mouser#571-9-211509)
+J14	|1|	DSUB 9 Male
+J4,J9	|2|	Pin Header 1x0 2.54mm
+J5	|1|	DIN-4 (mouser#571-5749181-1)
+J6,J7	|2|	RCA Jack
+J8	|1|	Pin Header 1x20 
+Q1	|1|	2sc1959 
+Q2	|1|	2SC1815
+R36	|1|	75ohm Resistor 1/4w
+R15	|1|	180ohm Resistor 1/4w
+R16	|1|	240ohm Resistor 1/4w
+R22	|1|	270ohm Resistor 1/4w
+R2,R4,R24	|3|	330ohm Resistor 1/4w
+R21	|1|	470ohm Resistor 1/4w
+R17	|1|	510ohm Resistor 1/4w
+R3,R5	|2|	560ohm Resistor 1/4w
+R19	|1|	1.8Kohm Resistor 1/4w
+R23	|1|	10Kohm Resistor 1/4w
+R6	|1|	150Kohm Resistor 1/4w
+R7,R11-R14,R18,R25-R35	|16|	1K ohm Resistor 1/4w
+R8-R10	|3|	2.2Kohm Resistor 1/4w
+R20	|1|	2.7Kohm Resistor 1/4w
+R1	|1|	220kohm Resistor 1/4w
+RV1	|1|	1Kohm Variable Resistor (Mouser# 531-PT10LV112A22PMS)
+SW1,SW3	|2|	DIP Switch 4 pos
+U19	|1|	2764
+U20	|1|	6560 (MOS, VIC-20 pull or E-Bay)
+U1	|1|	7402
+U4	|1|	7406
+U13	|1|	27512
+U24	|1|	74ALS32
+U8	|1|	74LS00
+U11	|1|	74LS02
+U9	|1|	74LS04
+U5,U10	|2|	74LS133
+U2,U6	|2|	74LS138
+U14,U15,U16,U18,U23	|5|	74LS245
+U12,U17	|2|	AS6C1008-55PCN
+U3	|1|	LM555
+U7	|1|	W65C02SxP
+U21,U22	|2|	W65C22NxP
+Y1	|1|	Crystal 14.31818Mhz
+
+
+Keyboard
+Part Number|Quantity|Name|Source
+-----------|--------|----|-------
+
 
 ---
