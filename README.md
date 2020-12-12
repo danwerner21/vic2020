@@ -56,21 +56,18 @@ On the VIC-2020 it is possible to use several different types of main ROM chips 
 
 Jumper Settings|Chip Used|Resulting eprom configuration 
 ---------------|---------|-----------------------
-J1 1&2 J2 1&2|27512         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
-J1 1&2 J2 1&2|27256         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
-J1 1&2 J2 1&2|27128         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
-
-J1 1&2 J2 2&3|27512         | BASIC image at 0x4000 through 0x5FFF KERNAL at 0x6000 through 0x7FFF
-J1 1&2 J2 2&3|27256         | BASIC image at 0x4000 through 0x5FFF KERNAL at 0x6000 through 0x7FFF
-J1 1&2 J2 2&3|27128         | NOT VALID
-
-J1 2&3 J2 1&2|27512         | BASIC image at 0x8000 through 0x9FFF KERNAL at 0xA000 through 0xBFFF
-J1 2&3 J2 1&2|27256         | NOT VALID
-J1 2&3 J2 1&2|27128         | NOT VALID
-
-J1 2&3 J2 1&2|27512         | BASIC image at 0xC000 through 0xDFFF KERNAL at 0xE000 through 0xFFFF
-J1 2&3 J2 1&2|27256         | NOT VALID
-J1 2&3 J2 1&2|27128         | NOT VALID
+J1 1&2, J2 1&2|27512         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
+J1 1&2, J2 1&2|27256         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
+J1 1&2, J2 1&2|27128         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
+J1 1&2, J2 2&3|27512         | BASIC image at 0x4000 through 0x5FFF KERNAL at 0x6000 through 0x7FFF
+J1 1&2, J2 2&3|27256         | BASIC image at 0x4000 through 0x5FFF KERNAL at 0x6000 through 0x7FFF
+J1 1&2, J2 2&3|27128         | NOT VALID
+J1 2&3, J2 1&2|27512         | BASIC image at 0x8000 through 0x9FFF KERNAL at 0xA000 through 0xBFFF
+J1 2&3, J2 1&2|27256         | NOT VALID
+J1 2&3, J2 1&2|27128         | NOT VALID
+J1 2&3, J2 1&2|27512         | BASIC image at 0xC000 through 0xDFFF KERNAL at 0xE000 through 0xFFFF
+J1 2&3, J2 1&2|27256         | NOT VALID
+J1 2&3, J2 1&2|27128         | NOT VALID
 
 ---
 
