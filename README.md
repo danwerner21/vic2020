@@ -13,10 +13,10 @@ Why would I do a replica of the VIC-20?   Well, like many others the VIC-20 was 
 
 ## What is included in this repo?
 As of this time, the repo includes
-*	The VIC-2020 Mainboard PCB Kicad design and Gerber files
-*	The VIC-2020 Keyboard PCB Kicad design and Gerber files
-*	OpenSCAD and STL files for a 3d printed case
-*	Design Files for Max Keyboard Custom Printed Keycaps
+*The VIC-2020 Mainboard PCB Kicad design and Gerber files
+*The VIC-2020 Keyboard PCB Kicad design and Gerber files
+*OpenSCAD and STL files for a 3d printed case
+*Design Files for Max Keyboard Custom Printed Keycaps
 
 ![Vic-2020 Mainboard](Support/images/mainboard.jpg)
 ![Vic-2020 Keyboard](Support/images/keyboard.jpg)
