@@ -80,7 +80,7 @@ J1 2&3, J2 1&2|27128         | NOT VALID
 
 ## Bill Of Materials
 
-###Mainboard
+### Mainboard
 
 Part Number|Quantity|Name
 -----------|--------|----
@@ -103,7 +103,7 @@ J11	|1|	Pin Header 2x8 2.54mm
 J12	|1|	Card Edge Connector 2x22 (Mouser #:587-305-044-520-502)
 J13	|1|	DIN 6 IEC connector (mouser#571-9-211509)
 J14	|1|	DSUB 9 Male
-J4,J9	|2|	Pin Header 1x0 2.54mm
+J4,J9	|2|	Pin Header 1x2 2.54mm
 J5	|1|	DIN-4 (mouser#571-5749181-1)
 J6,J7	|2|	RCA Jack
 J8	|1|	Pin Header 1x20 
@@ -145,11 +145,18 @@ U21,U22	|2|	W65C22NxP
 Y1	|1|	Crystal 14.31818Mhz
 
 
-###Keyboard
+### Keyboard
 
-Part Number|Quantity|Name|Source
------------|--------|----|-------
-a|b|c
+Quantity|Name
+--------|----
+65|Cherry MX Switch | (Example Mouser 540-MX1A-11NW)
+4|Switch Leveling Kit| Mouser 540-G99-0226 Note: Use one of 540-G99-0742 to build a through hole leveling kit for the spacebar
+1|Pin Header 1x20 
+1|Pin Header 1x2 or LED 
+1|330 Ohm Resistor
+1| Keycap set (See Max Keyboard Template to order custom keycaps)
+
+
 
 
 ---
