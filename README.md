@@ -83,7 +83,6 @@ J1 2&3, J2 1&2|27128         | NOT VALID
 Mainboard
 Part Number|Quantity|Name
 -----------|--------|----
-Reference	Qty	 Value
 C35,C36	|2|	.001uf Capacitor
 C7,C12-C34|	23|	.01uf Capacitor
 C1,C6,C8,C10,C40|	5|	.1uf Capacitor
