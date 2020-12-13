@@ -28,7 +28,7 @@
 
 /* [Box dimensions] */
 // - Longueur - Length  
-  Length        = 150;       
+  Length        = 180;       
 // - Largeur - Width
   Width         = 380;                     
 // - Hauteur - Height  
@@ -77,7 +77,7 @@ FootHole        = 3;
 
 /* [STL element to export] */
 //Top shell
-  TShell        = 1;// [0:No, 1:Yes]
+  TShell        = 0;// [0:No, 1:Yes]
 //Bottom shell
   BShell        = 1;// [0:No, 1:Yes]
 //Back panel  
@@ -85,7 +85,7 @@ FootHole        = 3;
 //Front panel
   FPanel        = 0;// [0:No, 1:Yes]
   
-  RLogo         = 1;// Logo
+  RLogo         = 0;// Logo
 
 
   
@@ -300,27 +300,27 @@ module BottomShell(){
                 
 
             // Power Opening    
-            translate([-1,(Thick)+26.6,Thick+4]){
-              cube([12,12,BottomHeight-11]);
+            translate([-1,(Thick)+13.6,Thick+4]){
+              cube([12,13,BottomHeight-11]);
             }   
 
             // Audio Opening    
-            translate([-1,(Thick)+46.7,Thick+4]){
-              cube([12,12,BottomHeight-11]);
+            translate([-1,(Thick)+33.7,Thick+4]){
+              cube([12,13,BottomHeight-11]);
             }   
 
             // Video Opening    
-            translate([-1,(Thick)+68.5,Thick+4]){
-              cube([12,12,BottomHeight-11]);
+            translate([-1,(Thick)+55.5,Thick+4]){
+              cube([12,13,BottomHeight-11]);
             }   
 
             // S-Video Opening    
-            translate([-1,(Thick)+91.5,Thick+4]){
-              cube([15,15,BottomHeight-9]);
-            }   
+          //  translate([-1,(Thick)+78.5,Thick+4]){
+         //     cube([15,16,BottomHeight-9]);
+         //   }   
 
             // IEC Opening    
-            translate([-1,(Thick)+118.2,Thick+4]){
+            translate([-1,(Thick)+105.2,Thick+4]){
               cube([21,21,BottomHeight-7]);
             }   
 
@@ -328,16 +328,16 @@ module BottomShell(){
     
             // Glamour Line
         
-            translate([Length-.5,0,BottomHeight-.75]){
+            translate([Length-1,0,BottomHeight-1.25]){
              cube([20,Width,20]);
                 }               
-            translate([-.5,0,BottomHeight-.75]){
+            translate([0,0,BottomHeight-1.25]){
              cube([1,Width,20]);
                 }
-             translate([0,-.5,BottomHeight-.75]){    
+             translate([0,0,BottomHeight-1.25]){    
               cube([Length,1,5]);
             }  
-             translate([0,Width-.5,BottomHeight-.75]){    
+             translate([0,Width-3,BottomHeight-1.25]){    
               cube([Length,20,5]);
             }  
            
@@ -481,54 +481,54 @@ module BottomFeet(){
 
 
 //top LEFT
-    translate([(3*Thick)+2+2.2,(Thick)+PCBW+15-351.8,Thick/2]){
+    translate([(3*Thick)+2+2.2,(Thick)+PCBW+5-351.9,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
-    translate([(3*Thick)+2+2.2,(Thick)+PCBW+15-215.3,Thick/2]){
+    translate([(3*Thick)+2+2.2,(Thick)+PCBW+5-217.3,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
 //top right       
-            translate([3*Thick+2+7.5,(Thick)+PCBW+15-9.7,Thick/2]){
+            translate([3*Thick+2+7.5,(Thick)+PCBW+5-9.7,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
             }
-        translate([3*Thick+2+7.5,(Thick)+PCBW+15-109.4,Thick/2]){
+        translate([3*Thick+2+7.5,(Thick)+PCBW+5-109.4,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }
 
-        translate([3*Thick+2+10.8,(Thick)+PCBW+15-140.5,Thick/2]){
+        translate([3*Thick+2+10.8,(Thick)+PCBW+5-140.5,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }
-    translate([(3*Thick)+2+26.8,(Thick)+PCBW+15-22.7,Thick/2]){
+    translate([(3*Thick)+2+24.3,(Thick)+PCBW+5-22.7,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
 
 
 //bottom LEFT
-    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+15-351.5,Thick/2]){
+    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+5-351.8,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
 
-    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+15-305,Thick/2]){
+    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+5-305.2,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
 
 
     //bottom right
-    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+15-22.7,Thick/2]){
+    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+5-22.7,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
-    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+15-81.5,Thick/2]){
+    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+5-81.5,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
-    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+15-149.2,Thick/2]){
+    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+5-149.2,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
-    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+15-6.4,Thick/2]){
+    translate([(3*Thick)+PCBL-10.2,(Thick)+PCBW+5-6.4,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
