@@ -77,7 +77,7 @@ FootHole        = 3;
 
 /* [STL element to export] */
 //Top shell
-  TShell        = 0;// [0:No, 1:Yes]
+  TShell        = 1;// [0:No, 1:Yes]
 //Bottom shell
   BShell        = 1;// [0:No, 1:Yes]
 //Back panel  
@@ -85,7 +85,7 @@ FootHole        = 3;
 //Front panel
   FPanel        = 0;// [0:No, 1:Yes]
   
-  RLogo         = 0;// Logo
+  RLogo         = 1;// Logo
 
 
   
@@ -544,7 +544,7 @@ union() {
 scale([.1,.1, .1])
 rotate([0,0,90])
     linear_extrude(height =30, center = false, convexity = 0, twist = 0)
-               import(file = "C:/Users/dwerner/Documents/KiCad/VIC2020/Support/viclogo.svg", center = true);    
+               import(file = "//LSERVER02/FileServer/fileserv/Development/Vintage/Projects/vic2020/Support/viclogo.svg", center = true);    
     translate([-10,-25,0])
      cube([20,50,1.5]);
 }
