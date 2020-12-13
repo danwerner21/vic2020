@@ -51,7 +51,7 @@
 
 
 // - Diamètre Coin arrondi - Filet diameter  
-  Filet         = 6;//[0.1:12] 
+  Filet         = 9;//[0.1:12] 
 // - lissage de l'arrondi - Filet smoothness  
   Resolution    = 50;//[1:100] 
 // - Tolérance - Tolerance (Panel/rails gap)
@@ -79,13 +79,13 @@ FootHole        = 3;
 //Top shell
   TShell        = 0;// [0:No, 1:Yes]
 //Bottom shell
-  BShell        = 1;// [0:No, 1:Yes]
+  BShell        = 0;// [0:No, 1:Yes]
 //Back panel  
   BPanel        = 0;// [0:No, 1:Yes]
 //Front panel
   FPanel        = 0;// [0:No, 1:Yes]
   
-  RLogo         = 0;// Logo
+  RLogo         = 1;// Logo
 
 
   
@@ -113,12 +113,11 @@ module SlopeRoundBox($a=Length, $b=Width, $c=TopHeight+BottomHeight){
                     minkowski ()
                     {  
               
-                    translate([0,($b/2),TopHeight])
+                    translate([0,($b/2)+1,TopHeight])
                        rotate(a=[0,-90,90])
-                          linear_extrude(height =($b/2)-Filet/2, center = false, convexity = 0, twist = 0)
-                              polygon(points=[[0,0],[(SlopeHeight+TopHeight)*-1,0],[TopHeight*-1,($a-Filet*2)*-1],[0,($a-Filet*2)*-1]], paths=[[3,2,1,0]]);                      
-                  
-                                      
+                          linear_extrude(height =(($b/2)-Filet/2)+1, center = false, convexity = 0, twist = 0)
+                              polygon(points=[[0,0],[(SlopeHeight+TopHeight)*-1,0],[(SlopeHeight+TopHeight)*-1,-30],  [TopHeight*-1,($a-Filet*2)*-1],[0,($a-Filet*2)*-1]], paths=[[3,2,1,0]]);                      
+                        
                      rotate([270,0,0]){    
                         cylinder(r=Filet,h=Width/2+1, center = false);
                             } 
@@ -182,14 +181,14 @@ module TopShell(){
                                     }   
                             }
 
-                    translate([3*Thick +5,Width-Thick/2-1.4,TopHeight]){
+                    translate([3*Thick +5,Width-Thick/2-2.4,TopHeight]){
                             rotate([90,0,0]){
                                     $fn=6;
                                     cylinder(d=16,Thick/2);
                                     }   
                             }
                             
-                       translate([Length-((3*Thick)+5),Width-Thick/2-1.4,TopHeight]){
+                       translate([Length-((3*Thick)+5),Width-Thick/2-2.4,TopHeight]){
                             rotate([90,0,0]){
                                     $fn=6;
                                     cylinder(d=16,Thick/2);
@@ -401,7 +400,7 @@ module foot(FootDia,FootHole,FootHeight){
 module KeyboardCutout()
 {
       color("OrangeRed"){
-        translate([40,Width-20,-20])
+        translate([70,Width-20,-20])
           {
                        rotate(a=[8,0,270])
            { 
@@ -410,19 +409,19 @@ module KeyboardCutout()
                
                           linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
                                 polygon(points=[[37.5,-26],[117.5,-26],[117.5,-4],[37.5,-4]], paths=[[0,1,2,3]]);        
-               
-                            linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
-                                polygon(points=[[217,-30],[352,-30],[352,-9],[217,-9]], paths=[[0,1,2,3]]);        
-               
                }
-                            }              
+                            
+               rotate(a=[0,0,270])
+                            linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
+                                polygon(points=[[217,-60],[352,-60],[352,-39],[217,-39]], paths=[[0,1,2,3]]);  
+               }              
         }
     }
 
 module KeyboardCutoutReinforcement()
 {
       color("OrangeRed"){
-        translate([40,Width-20,-14])
+        translate([70,Width-20,-14])
           {
                        rotate(a=[8,0,270])
            { 
@@ -431,11 +430,13 @@ module KeyboardCutoutReinforcement()
                
                           linear_extrude(height =5, center = false, convexity = 0, twist = 0)              
                                 polygon(points=[[35.5,-28],[119.5,-28],[119.5,-2],[35.5,-2]], paths=[[0,1,2,3]]);        
-               
+           }
+           translate([0,0,-4])
+           rotate(a=[0,0,270])
                             linear_extrude(height =5, center = false, convexity = 0, twist = 0)              
-                                polygon(points=[[214,-32],[354,-32],[354,-7],[214,-7]], paths=[[0,1,2,3]]);        
+                                polygon(points=[[214,-62],[354,-62],[354,-37],[214,-37]], paths=[[0,1,2,3]]);        
                
-               }
+               
                             }              
         }
     }
@@ -444,7 +445,7 @@ module KeyboardCutoutReinforcement()
 module KeyboardFeet()
 {
      color("OrangeRed"){
-        translate([40,Width-20,-15])
+        translate([70,Width-20,-15])
           {
                        rotate(a=[8,0,270])
            { 
