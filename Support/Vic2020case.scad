@@ -77,7 +77,7 @@ FootHole        = 3;
 
 /* [STL element to export] */
 //Top shell
-  TShell        = 0;// [0:No, 1:Yes]
+  TShell        = 1;// [0:No, 1:Yes]
 //Bottom shell
   BShell        = 0;// [0:No, 1:Yes]
 //Back panel  
@@ -85,7 +85,7 @@ FootHole        = 3;
 //Front panel
   FPanel        = 0;// [0:No, 1:Yes]
   
-  RLogo         = 1;// Logo
+  RLogo         = 0;// Logo
 
 
   
@@ -411,9 +411,14 @@ module KeyboardCutout()
                                 polygon(points=[[37.5,-26],[117.5,-26],[117.5,-4],[37.5,-4]], paths=[[0,1,2,3]]);        
                }
                             
+               //Cartridge slot
                rotate(a=[0,0,270])
                             linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
                                 polygon(points=[[217,-60],[352,-60],[352,-39],[217,-39]], paths=[[0,1,2,3]]);  
+               //LED OPENING
+                 rotate(a=[0,0,270])
+                            linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
+                                polygon(points=[[7,-50],[17.1,-50],[17.1,-52.1],[7,-52.1]], paths=[[0,1,2,3]]);  
                }              
         }
     }
