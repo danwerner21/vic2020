@@ -30,7 +30,7 @@
 // - Longueur - Length  
   Length        = 180;       
 // - Largeur - Width
-  Width         = 380;                     
+  Width         = 385;                     
 // - Hauteur - Height  
   TopHeight        = 10;  
   BottomHeight     = 25;  
@@ -294,7 +294,7 @@ module BottomShell(){
         
             // Joystick Opening    
             translate([79,Width-Dec_size-2,Thick+4]){    
-              cube([35,Dec_Thick+2,BottomHeight-13]);
+              cube([35,Dec_Thick+2,BottomHeight-5]);
             }
                 
 
@@ -319,7 +319,7 @@ module BottomShell(){
          //   }   
 
             // IEC Opening    
-            translate([-1,(Thick)+105.2,Thick+4]){
+            translate([-1,(Thick)+106.2,Thick+4]){
               cube([21,21,BottomHeight-7]);
             }   
 
@@ -414,7 +414,7 @@ module KeyboardCutout()
                //Cartridge slot
                rotate(a=[0,0,270])
                             linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
-                                polygon(points=[[217,-60],[352,-60],[352,-39],[217,-39]], paths=[[0,1,2,3]]);  
+                                polygon(points=[[217,-60],[357,-60],[357,-39],[217,-39]], paths=[[0,1,2,3]]);  
                //LED OPENING
                  rotate(a=[0,0,270])
                             linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
@@ -439,7 +439,7 @@ module KeyboardCutoutReinforcement()
            translate([0,0,-4])
            rotate(a=[0,0,270])
                             linear_extrude(height =5, center = false, convexity = 0, twist = 0)              
-                                polygon(points=[[214,-62],[354,-62],[354,-37],[214,-37]], paths=[[0,1,2,3]]);        
+                                polygon(points=[[214,-62],[359,-62],[359,-37],[214,-37]], paths=[[0,1,2,3]]);        
                
                
                             }              
@@ -506,7 +506,7 @@ module BottomFeet(){
         translate([3*Thick+2+10.8,(Thick)+PCBW+5-140.5,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }
-    translate([(3*Thick)+2+24.3,(Thick)+PCBW+5-22.7,Thick/2]){
+    translate([(3*Thick)+2+25.3,(Thick)+PCBW+5-22.7,Thick/2]){
         foot(FootDia,FootHole,FootHeight+0.2);
         }        
 
