@@ -232,12 +232,18 @@ module TopShell(){
                 }
             }//fin de sides holes
 
+         // IEC Opening    
+            translate([-1,(Thick)+243.8,Thick-3]){
+              cube([21,21,BottomHeight-7]);
+            }   
+
+
         KeyboardCutout();
 
         }//fin de difference holes
         KeyboardFeet();
         
-        
+
         
         
 
