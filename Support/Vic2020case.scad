@@ -420,7 +420,7 @@ module KeyboardCutout()
                //Cartridge slot
                rotate(a=[0,0,270])
                             linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
-                                polygon(points=[[217,-60],[357,-60],[357,-39],[217,-39]], paths=[[0,1,2,3]]);  
+                                polygon(points=[[216,-60],[359,-60],[359,-37],[216,-37]], paths=[[0,1,2,3]]);  
                //LED OPENING
                  rotate(a=[0,0,270])
                             linear_extrude(height =12, center = false, convexity = 0, twist = 0)              
@@ -445,7 +445,7 @@ module KeyboardCutoutReinforcement()
            translate([0,0,-4])
            rotate(a=[0,0,270])
                             linear_extrude(height =5, center = false, convexity = 0, twist = 0)              
-                                polygon(points=[[214,-62],[359,-62],[359,-37],[214,-37]], paths=[[0,1,2,3]]);        
+                                polygon(points=[[214,-62],[361,-62],[361,-35],[214,-35]], paths=[[0,1,2,3]]);        
                
                
                             }              
