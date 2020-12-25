@@ -77,7 +77,7 @@ FootHole        = 3;
 
 /* [STL element to export] */
 //Top shell
-  TShell        = 1;// [0:No, 1:Yes]
+  TShell        = 0;// [0:No, 1:Yes]
 //Bottom shell
   BShell        = 0;// [0:No, 1:Yes]
 //Back panel  
@@ -86,6 +86,8 @@ FootHole        = 3;
   FPanel        = 0;// [0:No, 1:Yes]
   
   RLogo         = 0;// Logo
+  
+  Spacer         = 1;// keyboard Spacer
 
 
   
@@ -605,7 +607,17 @@ if(RLogo==1)
             Logo();
         }
     }
- 
+} 
+
+if(Spacer==1)
+{    
+    
+    color( Couleur2,1){
+        translate([-60,-50,0]){
+                              linear_extrude(height =25, center = false, convexity = 0, twist = 0)
+                              polygon(points=[[0,0],[10,0],[10,10],[0,10]], paths=[[3,2,1,0]]);         
+        }
+}    
 }
 
 
