@@ -23,6 +23,9 @@ As of this time, the repo includes
 
 ![Vic-2020 Mainboard](Support/images/mainboard.jpg)
 ![Vic-2020 Keyboard](Support/images/keyboard.jpg)
+![Vic-2020 Assembled](Support/images/case1.jpg)
+![Vic-2020 Assembled](Support/images/case2.jpg)
+
 
 ---
 
@@ -49,6 +52,8 @@ Unlike the original, the VIC-2020 will run off of one regulated 5V 1.5A power su
 
 ### Ports
 In order to simplify the VIC-2020s power requirements, the cassette and user ports were ommitted from the system.   It is possible to use the lines in the AUX connector (J11) and the IEC port to gain access to the cassette data lines if one wanted to use a cassette emulator.  The cartridge port is mostly compatible (assuming proper setting of SW3) with the omission of the RAM1,RAM2, & RAM3 lines.
+Note that trimmer RV1 can be used to adjust video signal output strength.  If your particular TV appears either overdriven or too dim, adjust RV1 accordingly.   Variable Cap C2 can be used to adjust video signal phase -- adjust this trimmer if your VIC shows no color or the wrong colors.
+
 
 
 ### Ram Configuration
@@ -157,6 +162,10 @@ Quantity|Name
 1| Keycap set (See Max Keyboard Template to order custom keycaps)
 1| 1x20 Female to Female dupont connector ribbon cable to connect keyboard to mainboard
 
+
+### Case
+
+The case for the Vic-2020 was created using openSCAD and was printed on the AnyCubic Chiron large format printer.   The OpenSCAD source files and the STL files are included in the archive.
 
 ### Questions?
 
