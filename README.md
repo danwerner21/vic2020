@@ -33,6 +33,9 @@ As of this time, the repo includes
 ## Known Bugs
 
 * While the mainboard does have a S-VIDEO mod applied that should (in theory) provide S-VIDEO output, it does not work.   If anyone corrects this, please feel free to reach out and I will correct the schematics -- but for now, I would not populate the S-VIDEO connector, and always short the Chroma Disconnect jumper.
+ ** UPDATE **
+ Turns out the footprint for the SVIDEO connector in KiCad has the pins numbered incorrectly and that is the cause of the SVIDEO issue.   I have updated the PCB and Schematic to account for this, but have not tested the fix myself.  I am told that the SVIDEO out does work with a properly wired cable.
+ 
 
 ---
 
