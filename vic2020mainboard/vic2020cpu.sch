@@ -233,7 +233,7 @@ F 3 "~" H 900 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Timer:LM555 U?
+L Vic2020mainboard-rescue:LM555-Timer U?
 U 1 1 5F669AD1
 P 1850 4300
 AR Path="/5F669AD1" Ref="U?"  Part="1" 
@@ -568,7 +568,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 900  800  900 
 $Comp
-L Device:CTRIM C2
+L Vic2020mainboard-rescue:CTRIM-Device C2
 U 1 1 5F669BC8
 P 1900 900
 F 0 "C2" V 2153 900 50  0000 C CNN
@@ -1839,7 +1839,7 @@ F 3 "" H 10100 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB3
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB3
 U 1 1 5F9EA778
 P 8000 5100
 F 0 "FB3" V 7855 5100 50  0000 C CNN
@@ -1857,7 +1857,7 @@ Connection ~ 8450 5100
 Wire Wire Line
 	8450 5100 9050 5100
 $Comp
-L Device:Ferrite_Bead_Small FB2
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB2
 U 1 1 5FA26CDB
 P 7000 6150
 F 0 "FB2" V 6855 6150 50  0000 C CNN
@@ -1870,7 +1870,7 @@ $EndComp
 Wire Wire Line
 	6700 6150 6900 6150
 $Comp
-L Device:Ferrite_Bead_Small FB1
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB1
 U 1 1 5FA803BA
 P 5950 6150
 F 0 "FB1" V 5805 6150 50  0000 C CNN

@@ -223,9 +223,11 @@ F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 1
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C11
+L Vic2020mainboard-rescue:CP-Device C11
 U 1 1 608440DF
 P 10500 1350
+AR Path="/608440DF" Ref="C11"  Part="1" 
+AR Path="/5F5BC33E/608440DF" Ref="C11"  Part="1" 
 F 0 "C11" V 10245 1350 50  0000 C CNN
 F 1 "1uf" V 10336 1350 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 10538 1200 50  0001 C CNN
@@ -327,7 +329,7 @@ F 3 "" H 8900 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_POT RV1
+L Vic2020mainboard-rescue:R_POT-Device RV1
 U 1 1 6085CD64
 P 8900 2800
 F 0 "RV1" H 9050 2950 50  0000 R CNN
@@ -1317,7 +1319,7 @@ Text GLabel 6650 2500 2    47   Input ~ 0
 VA13
 NoConn ~ 5200 2350
 $Comp
-L Device:Ferrite_Bead_Small FB7
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB7
 U 1 1 5F767278
 P 6300 850
 F 0 "FB7" V 6063 850 50  0000 C CNN
@@ -1328,7 +1330,7 @@ F 3 "~" H 6300 850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB8
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB8
 U 1 1 5F768674
 P 6300 1000
 F 0 "FB8" V 6350 1100 50  0000 C CNN
@@ -1368,9 +1370,11 @@ $EndComp
 Wire Wire Line
 	5400 850  5500 850 
 $Comp
-L Device:CP C9
+L Vic2020mainboard-rescue:CP-Device C9
 U 1 1 5F792C3C
 P 6850 750
+AR Path="/5F792C3C" Ref="C9"  Part="1" 
+AR Path="/5F5BC33E/5F792C3C" Ref="C9"  Part="1" 
 F 0 "C9" H 7000 650 50  0000 R CNN
 F 1 "2.2uF" H 6800 650 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 6888 600 50  0001 C CNN
@@ -1379,9 +1383,11 @@ F 3 "~" H 6850 750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:CP C37
+L Vic2020mainboard-rescue:CP-Device C37
 U 1 1 5F794472
 P 7250 750
+AR Path="/5F794472" Ref="C37"  Part="1" 
+AR Path="/5F5BC33E/5F794472" Ref="C37"  Part="1" 
 F 0 "C37" H 7350 850 50  0000 R CNN
 F 1 ".47uF" H 7200 650 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 7288 600 50  0001 C CNN
@@ -1432,9 +1438,11 @@ Wire Wire Line
 	10150 750  10150 950 
 Connection ~ 8100 1000
 $Comp
-L Device:CP C38
+L Vic2020mainboard-rescue:CP-Device C38
 U 1 1 5F96202A
 P 8950 2150
+AR Path="/5F96202A" Ref="C38"  Part="1" 
+AR Path="/5F5BC33E/5F96202A" Ref="C38"  Part="1" 
 F 0 "C38" H 8850 2450 50  0000 L CNN
 F 1 "10uF" H 8850 2350 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 8988 2000 50  0001 C CNN
@@ -1446,9 +1454,11 @@ Connection ~ 8950 2000
 Wire Wire Line
 	8950 2000 9300 2000
 $Comp
-L Device:CP C39
+L Vic2020mainboard-rescue:CP-Device C39
 U 1 1 5F96349E
 P 9450 2750
+AR Path="/5F96349E" Ref="C39"  Part="1" 
+AR Path="/5F5BC33E/5F96349E" Ref="C39"  Part="1" 
 F 0 "C39" V 9300 2750 50  0000 C CNN
 F 1 "47uF" V 9600 2700 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 9488 2600 50  0001 C CNN
@@ -1457,7 +1467,7 @@ F 3 "~" H 9450 2750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB9
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB9
 U 1 1 5F9637C5
 P 7750 3000
 F 0 "FB9" V 7605 3000 50  0000 C CNN
@@ -1470,7 +1480,7 @@ $EndComp
 Wire Wire Line
 	7500 3000 7600 3000
 $Comp
-L Device:Ferrite_Bead_Small FB6
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB6
 U 1 1 5F9795E0
 P 4950 2200
 F 0 "FB6" V 4805 2200 50  0000 C CNN
@@ -1483,7 +1493,7 @@ $EndComp
 Wire Wire Line
 	4850 2200 4650 2200
 $Comp
-L Device:Ferrite_Bead_Small FB5
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB5
 U 1 1 5F98DF3B
 P 4950 1300
 F 0 "FB5" V 4805 1300 50  0000 C CNN
@@ -1494,7 +1504,7 @@ F 3 "~" H 4950 1300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB4
+L Vic2020mainboard-rescue:Ferrite_Bead_Small-Device FB4
 U 1 1 5F98E82C
 P 4800 1400
 F 0 "FB4" V 4900 1250 50  0000 C CNN
@@ -1746,9 +1756,9 @@ Wire Wire Line
 	9300 2800 9300 2750
 Text GLabel 9100 3650 2    50   Input ~ 0
 SVIDC
-Text GLabel 8100 5250 2    50   Input ~ 0
-VIDEOOUT
 Text GLabel 8100 4400 2    50   Input ~ 0
+VIDEOOUT
+Text GLabel 8100 5250 2    50   Input ~ 0
 SVIDC
 Wire Wire Line
 	8100 4550 8100 4400
