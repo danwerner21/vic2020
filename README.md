@@ -170,17 +170,17 @@ Quantity|Name
 
 The case for the Vic-2020 was created using openSCAD and was printed on the AnyCubic Chiron large format printer.   The OpenSCAD source files and the STL files are included in the archive.  The case is designed to allow you to install a power led in the upper left corner.   The opening is intended for two rectangular LEDs glued as shown here:
 
-![Case LED](Support/images/LED1.jpg)
-![Case Led internal](Support/images/LED.jpg)
+![Case LED](Support/images/LED1.JPG)
+![Case Led internal](Support/images/LED.JPG)
 
 
 It is also necessary to install a stabilizer on one corner of the keyboard to ensure that the keyboard PCB does not flex while typing.  This is how I did it:
 
-![Case Led internal](Support/images/keyboardstab.jpg)
+![Case Led internal](Support/images/keyboardstab.JPG)
 
 When complete, the interior of the 3d printed case will look like this:
 
-![Case internal](Support/images/internal.jpg)
+![Case internal](Support/images/internal.JPG)
 
 
 
