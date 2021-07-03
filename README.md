@@ -4,12 +4,12 @@ A Vic-20 clone created with [almost] all readily available parts
 
 
 ## Introduction
-This project is an implementation of a VIC-20 (mostly) compatible computer. The project is built using a combination of 1980's era components (7400-series logic) and more modern components- such as a modern 6502 variant and 512 KiB SRAM and 512 KiB Flash ROMs. The only hard to find component is the MOS 6560 VIC video chip -- and it is my hope to follow up this project with a project to replace that chip with a FPGA replacement, providing the open source community a full path to re-creating the VIC-20 with all new components. 
+This project is an implementation of a VIC-20 (mostly) compatible computer. The project is built using a combination of 1980's era components (7400-series logic) and more modern components- such as a modern 6502 variant and 512 KiB SRAM and 512 KiB Flash ROMs. The only hard to find component is the MOS 6560 VIC video chip -- and it is my hope to follow up this project with a project to replace that chip with a FPGA replacement, providing the open source community a full path to re-creating the VIC-20 with all new components.
 
 ![Vic-2020 board set](Support/images/bare_system.jpg)
 
 ## Why?
-Why would I do a replica of the VIC-20?   Well, like many others the VIC-20 was my first computer.  In 1981 I spent most of my (non-school) waking hours learning everything possible about this machine, and that launched me into a successful career in IT.   In the early 2000s I discovered the retro-computer scene and have spent many hours building and creating new retro computer designs following the work happening in such places as 6502.org and retrobrewcomputers.org.  So much so, that my boss (Jamie Fichter) has taken to giving me crap about spending my free time "Building VIC-20s" . . . .   It was earlier in 2020 when he had made one such comment that I realized that while I had constructed many vintage designs, I had never actually built a VIC-20.  I decided that I should correct that oversight as soon as possible -- and thus the VIC-2020 Fichter Edition was born.  
+Why would I do a replica of the VIC-20?   Well, like many others the VIC-20 was my first computer.  In 1981 I spent most of my (non-school) waking hours learning everything possible about this machine, and that launched me into a successful career in IT.   In the early 2000s I discovered the retro-computer scene and have spent many hours building and creating new retro computer designs following the work happening in such places as 6502.org and retrobrewcomputers.org.  So much so, that my boss (Jamie Fichter) has taken to giving me crap about spending my free time "Building VIC-20s" . . . .   It was earlier in 2020 when he had made one such comment that I realized that while I had constructed many vintage designs, I had never actually built a VIC-20.  I decided that I should correct that oversight as soon as possible -- and thus the VIC-2020 Fichter Edition was born.
 
 ---
 
@@ -35,7 +35,7 @@ As of this time, the repo includes
 * While the mainboard does have a S-VIDEO mod applied that should (in theory) provide S-VIDEO output, it does not work.   If anyone corrects this, please feel free to reach out and I will correct the schematics -- but for now, I would not populate the S-VIDEO connector, and always short the Chroma Disconnect jumper.
  ** UPDATE **
  Turns out the footprint for the SVIDEO connector in KiCad has the pins numbered incorrectly and that is the cause of the SVIDEO issue.   I have updated the PCB and Schematic to account for this, but have not tested the fix myself.  I am told that the SVIDEO out does work with a properly wired cable.
- 
+
 
 ---
 
@@ -69,7 +69,7 @@ The 8K 2764 EPROM at U19 contains the character ROM image for the VIC-2020.  The
 ### System ROM Configuration
 On the VIC-2020 it is possible to use several different types of main ROM chips and have several ROM images burned at the same time -- all selected by jumpers J1 and J2.
 
-Jumper Settings|Chip Used|Resulting eprom configuration 
+Jumper Settings|Chip Used|Resulting eprom configuration
 ---------------|---------|-----------------------
 J1 1&2, J2 1&2|27512         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
 J1 1&2, J2 1&2|27256         | BASIC image at 0x0000 through 0x1FFF KERNAL at 0x2000 through 0x3FFF
@@ -114,8 +114,8 @@ J14	|1|	DSUB 9 Male
 J4,J9	|2|	Pin Header 1x2 2.54mm
 J5	|1|	DIN-4 (mouser#571-5749181-1)
 J6,J7	|2|	RCA Jack
-J8	|1|	Pin Header 1x20 
-Q1	|1|	2sc1959 
+J8	|1|	Pin Header 1x20
+Q1	|1|	2sc1959
 Q2	|1|	2SC1815
 R36	|1|	75ohm Resistor 1/4w
 R15	|1|	180ohm Resistor 1/4w
@@ -159,8 +159,8 @@ Quantity|Name
 --------|----
 65|Cherry MX Switch | (Example Mouser 540-MX1A-11NW)
 4|Switch Leveling Kit| Mouser 540-G99-0226 Note: Use one of 540-G99-0742 to build a through hole leveling kit for the spacebar
-1|Pin Header 1x20 
-1|Pin Header 1x2 or LED 
+1|Pin Header 1x20
+1|Pin Header 1x2 or LED
 1|330 Ohm Resistor
 1| Keycap set (See Max Keyboard Template to order custom keycaps)
 1| 1x20 Female to Female dupont connector ribbon cable to connect keyboard to mainboard
@@ -168,11 +168,25 @@ Quantity|Name
 
 ### Case
 
-The case for the Vic-2020 was created using openSCAD and was printed on the AnyCubic Chiron large format printer.   The OpenSCAD source files and the STL files are included in the archive.
+The case for the Vic-2020 was created using openSCAD and was printed on the AnyCubic Chiron large format printer.   The OpenSCAD source files and the STL files are included in the archive.  The case is designed to allow you to install a power led in the upper left corner.   The opening is intended for two rectangular LEDs glued as shown here:
+
+![Case LED](Support/images/LED1.jpg)
+![Case Led internal](Support/images/LED.jpg)
+
+
+It is also necessary to install a stabilizer on one corner of the keyboard to ensure that the keyboard PCB does not flex while typing.  This is how I did it:
+
+![Case Led internal](Support/images/keyboardstab.jpg)
+
+When complete, the interior of the 3d printed case will look like this:
+
+![Case internal](Support/images/internal.jpg)
+
+
 
 ### Questions?
 
-If there are any questions, I can be reached at danwerner21 at gmail dot com.   
+If there are any questions, I can be reached at vic2020Dan at gmail dot com.
 
 
 ---
