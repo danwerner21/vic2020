@@ -180,7 +180,7 @@ It is also necessary to install a stabilizer on one corner of the keyboard to en
 
 When complete, the interior of the 3d printed case will look like this:
 
-![Case internal](Support/images/internal.JPG)
+![Case internal](Support/images/interior.JPG)
 
 
 
