@@ -69,9 +69,11 @@ F 3 "https://downloads.reactivemicro.com/Electronics/ROM/2764%20EPROM.pdf" H 390
 	1    0    0    -1  
 $EndComp
 $Comp
-L 6560:6560 U20
+L Vic2020mainboard-rescue:6560-6560 U20
 U 1 1 6083B46F
 P 5800 2500
+AR Path="/6083B46F" Ref="U20"  Part="1" 
+AR Path="/5F5BC33E/6083B46F" Ref="U20"  Part="1" 
 F 0 "U20" H 5800 2700 50  0000 C CNN
 F 1 "6560" H 5850 2550 50  0000 C CIB
 F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 5800 4500 50  0001 C CNN
@@ -739,7 +741,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 2900 4150 2900
 $Comp
-L as6c1008-55pcn:AS6C1008-55PCN U17
+L Vic2020mainboard-rescue:AS6C1008-55PCN-as6c1008-55pcn U17
 U 1 1 607D5355
 P 3500 3800
 F 0 "U17" H 3450 4050 50  0000 C CNN
@@ -1796,7 +1798,7 @@ U 1 1 601370BA
 P 8000 3650
 F 0 "C40" V 7748 3650 50  0000 C CNN
 F 1 ".1uf" V 7839 3650 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 8038 3500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 8038 3500 50  0001 C CNN
 F 3 "~" H 8000 3650 50  0001 C CNN
 	1    8000 3650
 	0    1    1    0   
