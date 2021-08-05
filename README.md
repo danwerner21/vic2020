@@ -4,7 +4,7 @@ A Vic-20 clone created with [almost] all readily available parts
 
 ## ANNOUNCEMENT!
 I will be attending the Vintage Computer Festival Midwest 16 on held September 11-12, 2021 held at the Waterford Banquets, Elmhurst, IL and will have a few VIC-2020 PCBs for sale at the event.
-See the website for conference details - http://vcfmw.org/
+![See the website for conference details](http://vcfmw.org/)
 
 ## Introduction
 This project is an implementation of a VIC-20 (mostly) compatible computer. The project is built using a combination of 1980's era components (7400-series logic) and more modern components- such as a modern 6502 variant and 512 KiB SRAM and 512 KiB Flash ROMs. The only hard to find component is the MOS 6560 VIC video chip -- and it is my hope to follow up this project with a project to replace that chip with a FPGA replacement, providing the open source community a full path to re-creating the VIC-20 with all new components.
