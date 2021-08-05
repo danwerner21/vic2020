@@ -21,7 +21,7 @@
     (37 F.SilkS user)
     (38 B.Mask user)
     (39 F.Mask user)
-    (40 Dwgs.User user hide)
+    (40 Dwgs.User user)
     (41 Cmts.User user hide)
     (42 Eco1.User user)
     (43 Eco2.User user)
@@ -4661,7 +4661,7 @@
   (segment (start 59.436 102.87) (end 59.69 103.124) (width 0.375) (layer F.Cu) (net 20))
   (segment (start 59.436 94.996) (end 59.436 102.87) (width 0.375) (layer F.Cu) (net 20))
 
-  (zone (net 18) (net_name I) (layer B.Cu) (tstamp 5FC180BE) (hatch edge 0.508)
+  (zone (net 18) (net_name I) (layer B.Cu) (tstamp 5FC18112) (hatch edge 0.508)
     (connect_pads (clearance 0.4318))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
