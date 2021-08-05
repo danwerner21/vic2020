@@ -3,7 +3,7 @@
 A Vic-20 clone created with [almost] all readily available parts
 
 ## ANNOUNCEMENT!
-I will be attending the Vintage Computer Festival Midwest 16 on held September 11-12, 2021 held at the Waterford Banquets, Elmhurst, IL and will have a few VIC-2020 PCBs for sale at the event.
+I will be attending the Vintage Computer Festival Midwest 16 on held September 11-12, 2021 held at the Waterford Banquets in Elmhurst, IL and will have a few VIC-2020 PCBs for sale at the event.
 [See the website for conference details](http://vcfmw.org/)
 
 ## Introduction
