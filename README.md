@@ -5,6 +5,7 @@ A Vic-20 clone created with [almost] all readily available parts
 ## ANNOUNCEMENT!
 I will be attending the Vintage Computer Festival Midwest 16 on held September 11-12, 2021 held at the Waterford Banquets in Elmhurst, IL and will have a few VIC-2020 PCBs for sale at the event.
 [See the website for conference details](http://vcfmw.org/)
+        ** note that the PCBs that I have for sale still have the Chroma/Luma pins reversed on the video connector.  Seems that I made a patch to correct the pins and KiCAD also made a patch to correct the PCB layout of the connector, and thus reversed each other's work. . .
 
 ## Introduction
 This project is an implementation of a VIC-20 (mostly) compatible computer. The project is built using a combination of 1980's era components (7400-series logic) and more modern components- such as a modern 6502 variant and 512 KiB SRAM and 512 KiB Flash ROMs. The only hard to find component is the MOS 6560 VIC video chip -- and it is my hope to follow up this project with a project to replace that chip with a FPGA replacement, providing the open source community a full path to re-creating the VIC-20 with all new components.
@@ -38,7 +39,7 @@ As of this time, the repo includes
 * While the mainboard does have a S-VIDEO mod applied that should (in theory) provide S-VIDEO output, it does not work.   If anyone corrects this, please feel free to reach out and I will correct the schematics -- but for now, I would not populate the S-VIDEO connector, and always short the Chroma Disconnect jumper.
  ** UPDATE **
  Turns out the footprint for the SVIDEO connector in KiCad has the pins numbered incorrectly and that is the cause of the SVIDEO issue.   I have updated the PCB and Schematic to account for this, but have not tested the fix myself.  I am told that the SVIDEO out does work with a properly wired cable.
-
+                ** note that the 1.1 version of the PCB still have the Chroma/Luma pins reversed on the video connector.  Seems that I made a patch to correct the pins and KiCAD also made a patch to correct the PCB layout of the connector, and thus reversed each other's work. . .  1.2 should be correct, but as always until it is tested, assume it needs patched.
 
 ---
 
