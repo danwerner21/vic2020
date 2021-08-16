@@ -5,6 +5,7 @@ A Vic-20 clone created with [almost] all readily available parts
 ## ANNOUNCEMENT!
 I will be attending the Vintage Computer Festival Midwest 16 on held September 11-12, 2021 held at the Waterford Banquets in Elmhurst, IL and will have a few VIC-2020 PCBs for sale at the event.
 [See the website for conference details](http://vcfmw.org/)
+<br>
         ** note that the PCBs that I have for sale still have the Chroma/Luma pins reversed on the video connector.  Seems that I made a patch to correct the pins and KiCAD also made a patch to correct the PCB layout of the connector, and thus reversed each other's work. . .
 
 ## Introduction
