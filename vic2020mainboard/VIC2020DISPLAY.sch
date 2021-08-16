@@ -1758,9 +1758,9 @@ Wire Wire Line
 	9300 2800 9300 2750
 Text GLabel 9100 3650 2    50   Input ~ 0
 SVIDC
-Text GLabel 8100 4400 2    50   Input ~ 0
-VIDEOOUT
 Text GLabel 7550 4750 0    50   Input ~ 0
+VIDEOOUT
+Text GLabel 8100 4400 0    50   Input ~ 0
 SVIDC
 Wire Wire Line
 	8100 4550 8100 4400
