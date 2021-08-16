@@ -7,7 +7,7 @@ I will be attending the Vintage Computer Festival Midwest 16 on held September 1
 [See the website for conference details](http://vcfmw.org/)
 
 
-# note that the PCBs that I have for sale still have the Chroma/Luma pins reversed on the video connector.  Seems that I made a patch to correct the pins and KiCAD also made a patch to correct the PCB layout of the connector, and thus reversed each other's work. . .
+### note that the PCBs that I have for sale still have the Chroma/Luma pins reversed on the video connector.  Seems that I made a patch to correct the pins and KiCAD also made a patch to correct the PCB layout of the connector, and thus reversed each other's work. . .
 
 ## Introduction
 This project is an implementation of a VIC-20 (mostly) compatible computer. The project is built using a combination of 1980's era components (7400-series logic) and more modern components- such as a modern 6502 variant and 512 KiB SRAM and 512 KiB Flash ROMs. The only hard to find component is the MOS 6560 VIC video chip -- and it is my hope to follow up this project with a project to replace that chip with a FPGA replacement, providing the open source community a full path to re-creating the VIC-20 with all new components.
