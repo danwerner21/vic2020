@@ -1,110 +1,51 @@
-
-/*//////////////////////////////////////////////////////////////////
-              -    FB Aka Heartman/Hearty 2016     -                   
-              -   http://heartygfx.blogspot.com    -                  
-              -       OpenScad Parametric Box      -                     
-              -         CC BY-NC 3.0 License       -                      
-////////////////////////////////////////////////////////////////////                                                                                                             
-12/02/2016 - Fixed minor bug 
-28/02/2016 - Added holes ventilation option                    
-09/03/2016 - Added PCB feet support, fixed the shell artefact on export mode. 
-
-*/////////////////////////// - Info - //////////////////////////////
-
-// All coordinates are starting as integrated circuit pins.
-// From the top view :
-
-//   CoordD           <---       CoordC
-//                                 ^
-//                                 ^
-//                                 ^
-//   CoordA           --->       CoordB
-
-
-////////////////////////////////////////////////////////////////////
-
-
-////////// - Paramètres de la boite - Box parameters - /////////////
-
 /* [Box dimensions] */
-// - Longueur - Length  
   Length        = 180;       
-// - Largeur - Width
   Width         = 385;                     
-// - Hauteur - Height  
   TopHeight        = 10;  
   BottomHeight     = 25;  
   SlopeHeight      = 20;
-// - Epaisseur - Wall thickness  
-  Thick         = 3;//[2:5]  
+  Thick         = 3;
 
 
   
 /* [Box options] */
-// Pieds PCB - PCB feet (x4) 
   PCBFeet       = 1;// [0:No, 1:Yes]
-// - Decorations to ventilation holes
   Vent          = 1;// [0:No, 1:Yes]
-// - Decoration-Holes width (in mm)
   Vent_width    = 1.5;   
 
 
 
-// - Diamètre Coin arrondi - Filet diameter  
   Filet         = 9;//[0.1:12] 
-// - lissage de l'arrondi - Filet smoothness  
   Resolution    = 50;//[1:100] 
-// - Tolérance - Tolerance (Panel/rails gap)
   m             = 0.9;
   
 /* [PCB_Feet--the_board_will_not_be_exported) ] */
 //All dimensions are from the center foot axis
-// - Coin bas gauche - Low left corner X position
 PCBPosX         = 0;
-// - Coin bas gauche - Low left corner Y position
 PCBPosY         = 0;
-// - Longueur PCB - PCB Length
 PCBLength       = 125;
-// - Largeur PCB - PCB Width
 PCBWidth        = 358;
-// - Heuteur pied - Feet height
 FootHeight      = 9;
-// - Diamètre pied - Foot diameter
 FootDia         = 8;
-// - Diamètre trou - Hole diameter
-FootHole        = 3;  
+FootHole        = 4.4;  
   
 
 /* [STL element to export] */
-//Top shell
   TShell        = 0;// [0:No, 1:Yes]
-//Bottom shell
-  BShell        = 0;// [0:No, 1:Yes]
-//Back panel  
-  BPanel        = 0;// [0:No, 1:Yes]
-//Front panel
-  FPanel        = 0;// [0:No, 1:Yes]
-  
+  BShell        = 1;// [0:No, 1:Yes]
   RLogo         = 0;// Logo
-  
-  Spacer         = 1;// keyboard Spacer
+  Spacer         = 0;// keyboard Spacer
 
 
   
 /* [Hidden] */
-// - Couleur coque - Shell color  
 Couleur1        = "Orange";       
-// - Couleur panneaux - Panels color    
 Couleur2        = "OrangeRed";    
-// Thick X 2 - making decorations thicker if it is a vent to make sure they go through shell
 Dec_Thick       = Vent ? Thick*2 : Thick; 
-// - Depth decoration
 Dec_size        = Vent ? Thick*2 : 0.8;
 
 PCBL=PCBLength;
 PCBW=PCBWidth;
-
-
 
    
 module SlopeRoundBox($a=Length, $b=Width, $c=TopHeight+BottomHeight){
@@ -133,14 +74,17 @@ module RoundBox($a=Length, $b=Width, $c=TopHeight+BottomHeight){
                     translate([0,Filet,Filet]){  
                     minkowski (){                                              
                         cube ([$a-(Length/2),$b-(2*Filet),$c-(2*Filet)], center = false);
-                        rotate([0,90,0]){    
-                        cylinder(r=Filet,h=Length/2, center = false);
+                        rotate([0,90,0]){   
+                           translate([0,0,Filet]){  
+                        cylinder(r=Filet,h=Length/2-(2*Filet), center = false);}
+                            } 
+                        rotate([270,0,0]){    
+                        cylinder(r=Filet,h=.1, center = false);
                             } 
                         }
                     }
                 }// End of RoundBox Module
 
-      
 
 
 module TopShell(){
@@ -161,7 +105,7 @@ module TopShell(){
                                         }
                                         }
                                     }
-                               translate([-Thick,-Thick,TopHeight]){// Cube à soustraire
+                               translate([-Thick,-Thick,TopHeight]){
                                    cube ([Length+100, Width+100, TopHeight+BottomHeight], center=false);
                                             }                                            
                                       }
@@ -200,12 +144,12 @@ module TopShell(){
 
                         }
                             
-                    } //Fin fixation box legs
+                    } 
                     
                     
             }
 
-       }//fin difference decoration
+       }
 
 
 ///Put Difference Keyboard Cutout Here
@@ -232,7 +176,7 @@ module TopShell(){
                     cylinder(d=2,20);
                     }
                 }
-            }//fin de sides holes
+            }
 
          // IEC Opening    
             translate([-1,(Thick)+243.8,Thick-3]){
@@ -242,14 +186,12 @@ module TopShell(){
 
         KeyboardCutout();
 
-        }//fin de difference holes
+        }
         KeyboardFeet();
         
+       
 
-        
-        
-
-}// fin coque 
+}
 
 
 
@@ -275,7 +217,7 @@ module BottomShell(){
                                         }
 
                                     }
-                               translate([-Thick,-Thick,BottomHeight]){// Cube à soustraire
+                               translate([-Thick,-Thick,BottomHeight]){
                                    cube ([Length+100, Width+100, TopHeight+BottomHeight], center=false);
                                             }                                            
                                       }
@@ -349,7 +291,7 @@ module BottomShell(){
             }  
            
                 
-            }//fin difference decoration
+            }
 
 
             union(){ //sides holes
@@ -374,9 +316,9 @@ module BottomShell(){
                     cylinder(d=2,20);
                     }
                 }
-            }//fin de sides holes
+            }
         }
-        }//fin de difference holes
+        }
 }
 
 
@@ -388,9 +330,8 @@ module foot(FootDia,FootHole,FootHeight){
     difference(){
     
     difference(){
-            //translate ([0,0,-Thick]){
+         
                 cylinder(d=FootDia+Filet,FootHeight-Thick, $fn=100);
-                        //}
                     rotate_extrude($fn=100){
                             translate([(FootDia+Filet*2)/2,Filet,0]){
                                     minkowski(){
@@ -488,10 +429,7 @@ module BottomFeet(){
         color("Olive")
         %text("PCB", halign="center", valign="center", font="Arial black");
        }
-    } // Fin PCB 
-////////////////////////////// - 4 Feet - //////////////////////////////////////////     
-
-
+    } 
 
 
 //top LEFT
@@ -558,7 +496,7 @@ union() {
 scale([.1,.1, .1])
 rotate([0,0,90])
     linear_extrude(height =30, center = false, convexity = 0, twist = 0)
-               import(file = "//LSERVER02/FileServer/fileserv/Development/Vintage/Projects/vic2020/Support/viclogo.svg", center = true);    
+               import(file = "n:/Projects/vic2020/Support/viclogo.svg", center = true);    
     translate([-10,-25,0])
      cube([20,50,1.5]);
 }
