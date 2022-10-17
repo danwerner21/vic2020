@@ -2,12 +2,6 @@
 # Vic-2020
 A Vic-20 clone created with [almost] all readily available parts
 
-## ANNOUNCEMENT!
-I will be attending the Vintage Computer Festival Midwest 16 on held September 11-12, 2021 held at the Waterford Banquets in Elmhurst, IL and will have a few VIC-2020 PCBs for sale at the event.
-[See the website for conference details](http://vcfmw.org/)
-
-
-##### note that the PCBs that I have for sale still have the Chroma/Luma pins reversed on the s-video connector.  Seems that I made a patch to correct the pins and KiCAD also made a patch to correct the PCB layout of the connector, and thus reversed each other's work. . .
 
 ## Introduction
 This project is an implementation of a VIC-20 (mostly) compatible computer. The project is built using a combination of 1980's era components (7400-series logic) and more modern components- such as a modern 6502 variant and 512 KiB SRAM and 512 KiB Flash ROMs. The only hard to find component is the MOS 6560 VIC video chip -- and it is my hope to follow up this project with a project to replace that chip with a FPGA replacement, providing the open source community a full path to re-creating the VIC-20 with all new components.
@@ -191,6 +185,15 @@ When complete, the interior of the 3d printed case will look like this:
 
 ![Case internal](Support/images/interior.JPG)
 
+### Builder Comments
+
+Below is a couple of observations from builders that might be useful in your build.  I have not tested any of these suggestions, just passing on collective wisdom :)
+
+* One bulder commented that he needed to replace U9 (74LS04->74F04) and U11 (74LS02->74F02) with F series logic in order to get clean RAM access.   I have not had a need to do this on any of my builds, but timing is very tight on this board, and it is always possible that these substitutions would help clear up issues.  This same builder needed to use a Rockwell 65C02 in place of the WDC 65C02 to get a stable build.
+
+* Another builder noted that is is important to use a 2764 EPROM for the character ROM.   A 27C64 EPROM caused graphical glitching when used.
+
+* It was recently reported that at least one builder has had success using a 6561 PAL VIC chip to replace the 6560 NTSC VIC chip.  It is also necessary to replce the 14.31818Mhz crystal with a 4.433618 MHz crystal in a PAL system.
 
 
 ### Questions?
